@@ -4,6 +4,12 @@
 
 An architectural, minimalist corporate holding portal for **GMM Group of Industries**, engineered to project generational stability, institutional scale, and boardroom gravitas.
 
+## 🚀 Live Portal
+
+🌐 **Production URL**: [https://gmmgroupofindustries.vercel.app](https://gmmgroupofindustries.vercel.app)
+
+---
+
 ## 🏛️ Conglomerate Architecture & Ecosystem
 
 GMM Group of Industries serves as the apex parent holding enterprise governing eight specialized market leaders across four core industrial verticals:
