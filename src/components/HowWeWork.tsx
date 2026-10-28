@@ -58,3 +58,4 @@ export const HowWeWork: React.FC<HowWeWorkProps> = ({ language }) => {
     </section>
   );
 };
+

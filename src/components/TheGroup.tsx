@@ -55,3 +55,4 @@ export const TheGroup: React.FC<TheGroupProps> = ({ language }) => {
     </section>
   );
 };
+

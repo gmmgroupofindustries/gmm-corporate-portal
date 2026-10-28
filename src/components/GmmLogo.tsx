@@ -40,3 +40,4 @@ export const GmmLogo: React.FC<GmmLogoProps> = ({ className = 'h-8 w-auto' }) =>
     </svg>
   );
 };
+

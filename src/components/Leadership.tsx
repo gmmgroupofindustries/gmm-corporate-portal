@@ -63,3 +63,4 @@ export const Leadership: React.FC<LeadershipProps> = ({ language }) => {
     </section>
   );
 };
+

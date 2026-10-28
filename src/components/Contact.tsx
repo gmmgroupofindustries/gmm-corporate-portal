@@ -110,3 +110,4 @@ export const Contact: React.FC<ContactProps> = ({ language }) => {
     </section>
   );
 };
+

@@ -398,3 +398,4 @@ export const siteContent: Record<Language, SiteContent> = {
     },
   },
 };
+
