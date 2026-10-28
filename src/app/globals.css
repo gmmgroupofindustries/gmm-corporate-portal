@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-concrete: #EDEFEE;
+  --color-steel: #1B2328;
+  --color-slate: #566168;
+  --color-amber: #FD953A;
+  --color-orange: #FA5D19;
+  --color-rust: #BF1E07;
+
+  /* Ribbon width: 10px on phones, clamp(1.25rem, 3.2vw, 2rem) from 720px */
+  --rb: 10px;
+  
+  /* Row min-heights */
+  --concern-row-min-h: 18rem;
+
+  /* Nav heights */
+  --nav-h: 56px;
+}
+
+@media (min-width: 720px) {
+  :root {
+    --rb: clamp(1.25rem, 3.2vw, 2rem);
+  }
+}
+
+@media (min-width: 720px) and (max-width: 1023px) {
+  :root {
+    --concern-row-min-h: 17rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --nav-h: 72px;
+  }
+}
+
+@media (min-width: 1920px) {
+  html {
+    font-size: 112.5%;
+  }
+}
+
+@media (min-width: 2560px) {
+  html {
+    font-size: 125%;
+  }
+}
+
+html {
+  background-color: var(--color-concrete);
+  color: var(--color-steel);
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: var(--color-concrete);
+}
+
+/* Nav sticky when height >= 500px, static below */
+@media (max-height: 499px) {
+  .site-nav {
+    position: static !important;
+  }
+}
+
+/* Anchors scroll-margin-top */
+[id] {
+  scroll-margin-top: var(--nav-h);
+}
+
+/* Strict link underlines using rust */
+a.text-link {
+  color: var(--color-steel);
+  text-decoration: underline;
+  text-decoration-color: var(--color-rust);
+  text-underline-offset: 0.25em;
+  text-decoration-thickness: 1.5px;
+  transition: opacity 0.15s ease;
+}
+
+@media (hover: hover) {
+  a.text-link:hover {
+    opacity: 0.8;
+  }
+}
+
+/* Focus rings with rust */
+:focus-visible {
+  outline: 2px solid var(--color-rust);
+  outline-offset: 3px;
+}
+
+/* Load Moment Animation (max 1.2s) */
+@keyframes ribbonDraw {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes headlineStep {
+  0% {
+    opacity: 0;
+    transform: translateY(1.25rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.anim-ribbon-load {
+  transform-origin: top;
+  animation: ribbonDraw 1.1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.anim-headline-1 {
+  animation: headlineStep 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards;
+  opacity: 0;
+}
+
+.anim-headline-2 {
+  animation: headlineStep 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.35s forwards;
+  opacity: 0;
+}
+
+.anim-hero-body {
+  animation: headlineStep 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.5s forwards;
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .anim-ribbon-load,
+  .anim-headline-1,
+  .anim-headline-2,
+  .anim-hero-body {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

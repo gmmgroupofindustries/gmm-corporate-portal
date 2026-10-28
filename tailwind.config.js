@@ -1,36 +1,36 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
       colors: {
-        gmm: {
-          flame: "#FC5812",
-          garnet: "#B61B07",
-          amber: "#FD8D27",
-          pearl: "#FBFBFD",
-          canvas: "#F4F5F8",
-          charcoal: "#0F141C",
-          obsidian: "#0A0D12",
-          slate: "#151922",
-          muted: "#5A6578",
-          subtle: "#8E9AA8",
-          hairline: "rgba(15, 23, 42, 0.08)",
-          hairlineDark: "rgba(255, 255, 255, 0.09)",
-        }
+        concrete: 'var(--color-concrete)',
+        steel: 'var(--color-steel)',
+        slate: 'var(--color-slate)',
+        amber: 'var(--color-amber)',
+        orange: 'var(--color-orange)',
+        rust: 'var(--color-rust)',
       },
       fontFamily: {
-        sans: ['"Plus Jakarta Sans"', 'Inter', 'system-ui', 'sans-serif'],
-        bengali: ['"Hind Siliguri"', '"Noto Sans Bengali"', 'system-ui', 'sans-serif'],
-        mono: ['"Space Grotesk"', 'monospace'],
+        sans: ['var(--font-jost)', 'system-ui', 'sans-serif'],
+        bengali: ['var(--font-hind-siliguri)', 'system-ui', 'sans-serif'],
       },
-      boxShadow: {
-        'subtle': '0 1px 3px 0 rgba(0, 0, 0, 0.04), 0 1px 2px -1px rgba(0, 0, 0, 0.04)',
-        'elevated': '0 10px 30px -10px rgba(0, 0, 0, 0.08)',
-        'glass': '0 8px 32px 0 rgba(0, 0, 0, 0.05)',
+      maxWidth: {
+        'content': '62rem',
+        'layout': '90rem',
+      },
+      padding: {
+        'section': 'clamp(72px, 9vw, 160px)',
+        'layout': 'clamp(20px, 5vw, 64px)',
+      },
+      screens: {
+        'tablet': '720px',
+        'desktop': '1024px',
+        'large': '1920px',
+        'huge': '2560px',
       }
     },
   },
