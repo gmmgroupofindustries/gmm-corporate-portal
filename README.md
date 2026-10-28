@@ -4,6 +4,12 @@ An architectural, quiet corporate-identity website for GMM Group of Industries, 
 
 ---
 
+## 🚀 Live Portal
+
+🌐 **Production URL**: [https://gmm-corporate-portal.vercel.app](https://gmm-corporate-portal.vercel.app)
+
+---
+
 ## Content Editing Guide
 
 All site copy is centralized in a single file:
